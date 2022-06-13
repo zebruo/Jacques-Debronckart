@@ -1,0 +1,40 @@
+.container{
+	display: flex;
+	flex-flow: row wrap;
+}
+header, article, footer, aside{
+	flex: 1 100%;
+
+	margin: 5px;
+	background: tomato;
+}
+
+@media all and (min-width: 480px){
+	.aside{
+		flex:1 auto;
+	}
+
+}
+
+@media all and (min-width: 760px){
+	article{
+		flex:2 0px;
+	}
+
+	header{
+		order:1;
+	}
+	.aside1{
+		order:2;
+	}
+	article{
+		order:3;
+	}
+	.aside2{
+		order:4;
+	}
+	footer{
+		order:5;
+	}
+
+}

@@ -1,0 +1,17 @@
+ul.navigation{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:flex-end;
+}
+
+@media all and (max-width: 480px){
+	ul.navigation{
+		flex-direction:column;
+	}
+}
+
+@media all and (max-width: 760px){
+	ul.navigation{
+		justify-content:space-around;
+	}
+}

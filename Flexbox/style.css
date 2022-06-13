@@ -1,0 +1,41 @@
+.container{
+	background: aqua;
+	padding: 10px;
+	min-height:650px;
+	margin:10px;
+	display: flex;
+
+	flex-direction:row;/*row-reverse | column | column-reverse*/ 
+	flex-wrap: no-wrap; /* no-wrap */
+
+	/*flex-flow: row wrap; /*résumé des deux */
+
+	justify-content: space-around; /*space-between | flex-start | flex-end | center | stretch*/
+	align-items: center; /* flex-start |flex-end | center | baseline | stretch */
+}
+
+.item{
+	background: #fff;
+	margin: 10px;
+	min-height: 90px;
+	flex-basis:12em; /*taille par déafut des éléments avant d'être "retaillés" par le navigateur*/
+	flex-grow:1; /*  Attention, la valeur par défaut est 0 */
+}
+
+.item1{
+	order:1; /* l'ordre des boites. Celui ci commence après que les boites non affectées par order ait été affiché */
+	flex-grow:2;
+}
+.item2{
+	order:3;
+	flex-grow:2;
+	flex-shrink:2;
+	flex: 2 2 12em; /* résume flex-grow flex-shrink & flex-basis */
+	flex: 2 100px;
+	align-self:flex-end;/* permet de mettre une valeur locale à la valeur d'alignement vertciale globale définie dans align-items */
+}
+.item3{
+	order:2;
+	flex-grow:3;
+	align-self:flex-start;
+}
